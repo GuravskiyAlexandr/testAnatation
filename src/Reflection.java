@@ -20,7 +20,6 @@ public class Reflection {
             Class<?> fieldType = f.getType();
             System.out.println( f.getName()+" = " + fieldType.getTypeName());
         }
-
         try {
             Class<?>[] obj = new Class<?>[]{int.class, int.class}; //указуем два параметра которые мы имеем в классе
             Method method = fClass.getMethod("test", obj );
