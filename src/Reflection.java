@@ -15,12 +15,11 @@ public class Reflection {
         TestClass testClass = fClass.getAnnotation(TestClass.class);
         System.out.println( "class annotation parameter = " +  testClass.param());
 
-        Field[] fields = fClass.getDeclaredFields(); // // получить все поля
+        Field[] fields = fClass.getDeclaredFields(); // // получить все поля!!!
         for ( Field f : fields) {
             Class<?> fieldType = f.getType();
             System.out.println( f.getName()+" = " + fieldType.getTypeName());
         }
-
         try {
             Class<?>[] obj = new Class<?>[]{int.class, int.class}; //указуем два параметра которые мы имеем в классе
             Method method = fClass.getMethod("test", obj );
